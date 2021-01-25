@@ -146,7 +146,6 @@
     clamav
     macchanger
     protonvpn-cli
-    #gnome3.gnome-keyring
     libsecret
     pass
 
