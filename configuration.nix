@@ -100,6 +100,7 @@
 
   # Personal Tools
     firefox
+    vimHugeX
     neovim
     bat
     feh
@@ -147,6 +148,7 @@
     macchanger
     protonvpn-cli
     libsecret
+    pinentry
     pass
 
   # Personalisation
@@ -169,6 +171,7 @@
   programs.gnupg.agent = {
     enable = true; 
     enableSSHSupport = true;
+    pinentryFlavor = "curses";
   };
 
   # List services that you want to enable:
