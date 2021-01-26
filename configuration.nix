@@ -120,7 +120,7 @@
     teams
     tdesktop
     thunderbird
-    zoom
+    zoom-us
     steam
 
   # Work Tools
