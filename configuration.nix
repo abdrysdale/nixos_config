@@ -77,7 +77,7 @@
 
   # Sys Admin Tools
     wget 
-    vim
+    (import ./vim.nix)
     git
     man
     which
@@ -96,7 +96,8 @@
 			];
 			configFile = writeText "config.def.h" (builtins.readFile /home/al/.config/st-0.8.4/config.h);
 			postPatch = "${oldAttrs.postPatch}\n cp ${configFile} config.def.h";
-		}))
+		}
+    ))
 
   # Personal Tools
     firefox
