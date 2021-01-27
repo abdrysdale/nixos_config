@@ -87,6 +87,7 @@
 
   # Dev Tools
     python3
+    poetry
     gcc
     gnumake
     (st.overrideAttrs (oldAttrs: rec {
