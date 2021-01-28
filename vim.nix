@@ -41,6 +41,7 @@ vim_configurable.customize {
         "vim-markdown"
         "nerdtree"
         "vim-gitgutter"
+        "todo-txt-vim"
         ]; }
     ];
 }
