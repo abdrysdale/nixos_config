@@ -87,7 +87,7 @@
 
   # Dev Tools
     python3
-    poetry
+    pkg-config
     gcc
     gnumake
     (st.overrideAttrs (oldAttrs: rec {
@@ -175,6 +175,10 @@
     enableSSHSupport = true;
     pinentryFlavor = "curses";
   };
+
+  environment.pathsToLink = [
+      "~/.local/bin/"
+  ];
 
   # List services that you want to enable:
 
