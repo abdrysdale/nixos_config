@@ -25,7 +25,7 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.eno1.useDHCP = true;
-  networking.interfaces.proton0.useDHCP = true;
+  #networking.interfaces.proton0.useDHCP = true;
   networking.interfaces.wlo1.useDHCP = true;
 
   # Configure network proxy if necessary
@@ -54,8 +54,15 @@
 
   # X Window System
   services.xserver.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+      i3lock-fancy
+      i3blocks
+    ];
+  };
   services.xserver.autorun = true; # Default is true
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
@@ -108,14 +115,9 @@
     fzf
     scrot
 
-  # Window Manager
-    i3
-    i3blocks
-    i3lock
-    i3lock-fancy
-
   # Communication 
     discord
+    element-desktop
     protonmail-bridge
     signal-desktop
     teams
