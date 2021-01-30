@@ -7,6 +7,7 @@ vim_configurable.customize {
 	vimrcConfig.customRC = ''
 		set nu
 		syntax on
+        set backspace=indent,eol,start
 		let g:vim_markdown_math = 1
 		let g:vim_markdown_strikethrough = 1
 		set viminfo='100,f1
