@@ -155,6 +155,7 @@
     pass
 
   # Personalisation
+    dijo
     flashfocus
     picom
     redshift
