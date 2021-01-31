@@ -13,6 +13,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.configurationLimit = 5;
 
   networking.hostName = "nixal"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
