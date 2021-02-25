@@ -53,6 +53,9 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # Steam needs this
+  hardware.opengl.driSupport32Bit = true;
+
   # X Window System
   services.xserver.enable = true;
   services.xserver.windowManager.i3 = {
@@ -63,6 +66,20 @@
     ];
   };
   services.xserver.autorun = true; # Default is true
+
+  # Automatically update NixOS
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = false;
+
+  # Storage optimisation
+  nix.autoOptimiseStore = true;
+
+  # Automatic garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 7d";
+  };
 
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -75,6 +92,11 @@
     extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ and networking for the user.
   };
   users.users.root.initialHashedPassword = "";
+
+  # Creates clamav user
+  users.users._clamav = {
+    isNormalUser = true;
+  };
 
   # Enables proprioetry software
   nixpkgs.config.allowUnfree = true;
@@ -111,6 +133,7 @@
   # Personal Tools
     firefox
     vimHugeX
+    marktext
     bat
     feh
     fzf
@@ -137,6 +160,11 @@
     zathura
     zotero
 
+  # Latex tools
+    texlive.combined.scheme-full
+    biber
+    xdotool
+
   # Media
     mpv
     ncspot
@@ -156,7 +184,6 @@
     pass
 
   # Personalisation
-    dijo
     flashfocus
     picom
     redshift
@@ -168,6 +195,7 @@
     nextcloud-client
     transmission-gtk
     ranger
+    testdisk
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
