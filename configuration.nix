@@ -26,8 +26,7 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.eno1.useDHCP = true;
-  #networking.interfaces.proton0.useDHCP = true;
-  networking.interfaces.wlo1.useDHCP = true;
+  networking.interfaces.wlan0.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -157,6 +156,7 @@
     libreoffice
     termdown
     todo-txt-cli
+    okular
     zathura
     zotero
 
