@@ -26,7 +26,7 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   networking.interfaces.eno1.useDHCP = true;
-  networking.interfaces.wlan0.useDHCP = true;
+  networking.interfaces.wlo1.useDHCP = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -40,6 +40,11 @@
   };
 
   
+  # Keeps build-time dependencies around to be able to rebuild while being offline.
+  nix.extraOptions = ''
+    keep-outputs = true
+    keep-derivations = true
+    '';
 
   # Configure keymap in X11
   services.xserver.layout = "gb";
