@@ -161,6 +161,7 @@
     libreoffice
     termdown
     todo-txt-cli
+    todoist-electron
     okular
     zathura
     zotero
