@@ -33,6 +33,7 @@ vim_configurable.customize {
 		inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 		set splitbelow
 		set splitright
+        nmap cp :let @" = expand("%")<cr>
 	'';
     vimrcConfig.vam.knownPlugins = pkgs.vimPlugins;
     vimrcConfig.vam.pluginDictionaries = [
