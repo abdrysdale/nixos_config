@@ -85,15 +85,21 @@
     options = "--delete-older-than 7d";
   };
 
-
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
   services.xserver.libinput.touchpad.tapping = true;
 
+  # Enables docker
+  virtualisation.docker.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.al = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager"]; # Enable ‘sudo’ and networking for the user.
+    extraGroups = [ 
+      "wheel" 
+      "networkmanager"
+      "docker"
+    ]; # Enable ‘sudo’ and networking for the user.
   };
   users.users.root.initialHashedPassword = "";
 
@@ -212,6 +218,9 @@
     enableSSHSupport = true;
     pinentryFlavor = "curses";
   };
+
+  # Enables singularity
+  programs.singularity.enable = true;
 
   environment.pathsToLink = [
       "~/.local/bin/"
