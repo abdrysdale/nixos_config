@@ -118,14 +118,15 @@
   # Sys Admin Tools
     wget 
     (import ./vim.nix)
-    git
     man
     which
     xclip
     xorg.xbacklight
     lsof
+    unzip
 
   # Dev Tools
+    git
     python3
     pkg-config
     gcc
@@ -144,6 +145,7 @@
     firefox
     vimHugeX
     marktext
+    obsidian
     bat
     feh
     fzf
@@ -162,6 +164,7 @@
 
   # Work Tools
     dia
+    direnv
     gnumeric
     inkscape
     libreoffice
@@ -172,7 +175,7 @@
     zathura
     zotero
 
-  # Latex tools
+  # Latex Tools
     texlive.combined.scheme-full
     biber
     xdotool
@@ -208,6 +211,7 @@
     transmission-gtk
     ranger
     testdisk
+    zip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
