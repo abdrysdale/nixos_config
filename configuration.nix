@@ -89,9 +89,6 @@
   services.xserver.libinput.enable = true;
   services.xserver.libinput.touchpad.tapping = true;
 
-  # Enables docker
-  virtualisation.docker.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.al = {
     isNormalUser = true;
@@ -102,6 +99,13 @@
     ]; # Enable ‘sudo’ and networking for the user.
   };
   users.users.root.initialHashedPassword = "";
+
+  # Enables docker
+  virtualisation.docker.enable = true;
+
+  # Enables virtualbox
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["al"];
 
   # Creates clamav user
   users.users._clamav = {
