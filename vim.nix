@@ -7,6 +7,7 @@ vim_configurable.customize {
 	vimrcConfig.customRC = ''
         set relativenumber number
         set hidden
+        set incsearch
 		syntax on
         set backspace=indent,eol,start
 		let g:vim_markdown_math = 1
