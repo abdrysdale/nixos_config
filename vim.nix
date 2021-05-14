@@ -45,6 +45,7 @@ vim_configurable.customize {
         "nerdtree"
         "vim-gitgutter"
         "todo-txt-vim"
+        "rainbow_parentheses"
         ]; }
     ];
 }
