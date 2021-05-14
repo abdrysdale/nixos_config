@@ -5,7 +5,7 @@ vim_configurable.customize {
 	# Binary name
 	name = "vim";
 	vimrcConfig.customRC = ''
-		set nu
+        set relativenumber number
         set hidden
 		syntax on
         set backspace=indent,eol,start
