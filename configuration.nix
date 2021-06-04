@@ -149,7 +149,6 @@
     firefox
     vimHugeX
     marktext
-    obsidian
     bat
     feh
     fzf
@@ -169,6 +168,7 @@
   # Work Tools
     dia
     direnv
+    glab
     gnumeric
     inkscape
     libreoffice
