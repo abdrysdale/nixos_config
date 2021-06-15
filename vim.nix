@@ -43,7 +43,6 @@ vim_configurable.customize {
         # Plug ins at:
         # https://github.com/NixOS/nixpkgs/blob/master/pkgs/misc/vim-plugins/vim-plugin-names
         "vim-markdown"
-        "vim-markdown-composer"
         "nerdtree"
         "vim-gitgutter"
         "todo-txt-vim"
