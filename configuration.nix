@@ -16,7 +16,19 @@
   boot.loader.grub.configurationLimit = 7;
 
   networking.hostName = "nixal"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless = {
+    enable = true;  # Enables wireless support via wpa_supplicant.
+    interfaces = [ "wlan0" ];
+    networks = {
+      "NHS Wi-Fi" = {};
+      "FRITZ!Box 7530 SF" = {
+        pskRaw = "561aa84aab578ed74048a730573982cef08be7213901962e89b28e39da7aee89";
+      };
+      "BT-JGA595" = {
+        pskRaw = "17b997d489e50f6e937122cfb6855b6a36cb5bb2c055f84293685136db408574";
+      };
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/London";
