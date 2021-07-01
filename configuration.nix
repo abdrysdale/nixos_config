@@ -84,8 +84,11 @@
   services.xserver.autorun = true; # Default is true
 
   # Automatically update NixOS
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = false;
+  system.autoUpgrade = { 
+    enable = true;
+    allowReboot = false;
+    channel = "https://channels.nixos.org/nixos-unstable-small";
+  };
 
   # Storage optimisation
   nix.autoOptimiseStore = true;
@@ -105,10 +108,10 @@
   users.users.al = {
     isNormalUser = true;
     extraGroups = [ 
-      "wheel" 
-      "networkmanager"
-      "docker"
-    ]; # Enable ‘sudo’ and networking for the user.
+      "wheel"  # Enables sudo
+      "networkmanager" # Enables networking
+      "docker" # Enables docker
+    ];
   };
   users.users.root.initialHashedPassword = "";
 
